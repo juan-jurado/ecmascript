@@ -117,3 +117,73 @@ console.log(globalLet); //globalLet is just declared inside of the scope
 const a = 'b';
 a = 'a';
 console.log(a);
+
+// -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+
+// Let's work with objects
+
+let name = 'Juan';
+let age = 28;
+
+// Traditional Mode ES5
+obj = { name: name, age: age };
+
+// ES6 Mode
+obj2 = { name, age }
+
+console.log(obj2);
+
+// -----------------------------------------------------------------------------
+// Arrow Functions
+
+// las Arrow functions son funciones anonimas
+const names = [
+    {name: 'Juan', age: 28},
+    {name: 'Julian', age: 24}
+]
+
+// Traditional Mode ES5
+// si yo quiero iterar usaría el método MAP
+let listOfNames = names.map(function (item) {
+    console.log(item.name);
+})
+
+// ES6 Mode
+let listOfNames2 = names.map(item => console.log(item.name));
+
+const listOfNames3 = (name, age, country) => {
+    ...
+}
+
+const listOfNames4 = name => {
+    ...
+}
+
+const square = num => num * num; //funcion arrow more friendly
+// At the end return in num - I don't need return in a function
+
+// -----------------------------------------------------------------------------
+
+// Promises - Asynchronism
+// something is going to happen
+
+const helloPromise = () => {
+    return new Promise((resolve, reject) => {
+        //we are going to resolve something
+        if (true){
+            resolve('HEY! We are good');
+        } else {
+            reject ('oops!');
+        }
+    });
+} 
+
+helloPromise()
+    .then(response => console.log(response))
+    .then(() => console.log('hola'))
+    .catch(error => console.log(error));
+
+// -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+
