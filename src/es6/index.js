@@ -240,3 +240,7 @@ console.log(generatorHello.next().value); //value = World
 console.log(generatorHello.next().value); //value = undefined
 
 // Generators example : Fibonacci Serie
+
+// -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+
