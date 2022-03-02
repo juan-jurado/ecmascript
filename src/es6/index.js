@@ -187,3 +187,56 @@ helloPromise()
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
 
+// Calculator
+
+class calculator {
+    // Constructor assign default value global
+    constructor() {
+        this.valueA = 0;
+        this.valueB = 0;
+    }
+    // sum method - 2 values to sum
+    sum(valueA, valueB){
+        this.valueA = valueA;
+        this.valueB = valueB;
+        return this.valueA + this.valueB;
+    }
+}
+
+const calc = new calculator();
+console.log(calc.sum(2,2)); // Output:4
+
+// -----------------------------------------------------------------------------
+
+// import & Export modules
+
+import { hello } from './module';
+
+var a = hello();
+
+console.log(a);
+
+// -----------------------------------------------------------------------------
+
+// Generators
+
+// special function
+
+function* helloWorldGenerator() {
+    if (true) {
+        yield 'Hello, ';
+    }
+    if (true) {
+        yield 'World';
+    }
+};
+
+const generatorHello = helloWorldGenerator();
+
+console.log(generatorHello.next().value); //value = Hello, 
+
+console.log(generatorHello.next().value); //value = World
+
+console.log(generatorHello.next().value); //value = undefined
+
+// Generators example : Fibonacci Serie
