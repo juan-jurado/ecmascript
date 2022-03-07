@@ -18,3 +18,14 @@ class Message {
 
 const message = new Message();
 message.show('Hola!');
+
+// Ahora volviendo privado el método es poniendo '#' al inicio
+
+class Message {
+    #show(val){
+        console.log(val);
+    };
+}
+
+const message = new Message();
+message.show('Hola!');
